@@ -1,107 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon_portfolio_peniel</title>
+    <title>My_portfolio_peniel</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .text-shadow-lg\/30 {
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+        }
+    </style>
 </head>
-<body class="bg-gray-950 text-white font-sans">
-    <header class="p-6 relative flex justify-between items-center bg-linear-to-r from-white to-white bg-clip-text text-transparent">
-        <span id="logo-pema" class="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 text-3xl font-semibold text-shadow-lg/30 text-shadow-white tracking-wide md:hidden font-stretch-extra-condensed" role="link" tabindex="0">P<strong class="font-medium  animate-spin">E</strong>M<strong class="font-medium animate-spin">A</strong>.<strong class="italic font-normal text-lg ">digital</strong></span>
 
-        <nav class="hidden md:flex flex-1 justify-center items-center">
-            <ul class="flex space-x-4">
-                <li><a href="#" class="text-white transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-yellow-300">Home</a></li>
-                <li><a href="#" class="text-white transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-yellow-300">About</a></li>
-                <li><a href="#" class="text-white transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-yellow-300">Projects</a></li>
-                <li><a href="#" class="text-white transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-yellow-300">Contact</a></li>
+<body class="bg-gray-950 text-white font-sans min-h-screen flex flex-col overflow-x-hidden">
+    <header class="p-4 md:p-6 relative flex justify-between items-center bg-gray-950 z-50">
+        <span id="logo-pema-mobile"
+            class="md:hidden transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 text-3xl font-semibold bg-linear-to-r from-white to-white bg-clip-text text-transparent text-shadow-lg/30 tracking-wide font-stretch-extra-condensed"
+            role="link" tabindex="0">
+            P<strong class="font-medium">E</strong>M<strong class="font-medium">A</strong>.<strong
+                class="italic font-normal text-lg">digital</strong>
+        </span>
+
+        <div class="hidden md:flex flex-1 justify-center items-center">
+            <span id="logo-pema-desktop"
+                class="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 text-3xl font-semibold bg-linear-to-r from-white to-white bg-clip-text text-transparent text-shadow-lg/30 tracking-wide font-stretch-extra-condensed"
+                role="link" tabindex="0">
+                P<strong class="font-medium">E</strong>M<strong class="font-medium">A</strong>.<strong
+                    class="italic font-normal text-lg">digital</strong>
+            </span>
+        </div>
+
+        <nav class="hidden md:flex justify-end items-center absolute right-6">
+            <ul class="flex space-x-6 lg:space-x-8">
+                <li><a href="index.html"
+                        class="text-white text-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-yellow-300">Home</a>
+                </li>
+                <li><a href="about.html"
+                        class="text-white text-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-yellow-300">About</a>
+                </li>
+                <li><a href="projects.html"
+                        class="text-white text-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-yellow-300">Projects</a>
+                </li>
+                <li><a href="contact.html"
+                        class="text-white text-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-yellow-300">Contact</a>
+                </li>
             </ul>
         </nav>
 
-        <button id="menu-toggle" class="md:hidden  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 animate-pulse p-2 focus:outline-none z-50">
-            <svg class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path id="burger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        <button id="menu-toggle"
+            class="md:hidden transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 animate-pulse p-2 focus:outline-none z-50">
+            <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path id="burger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"></path>
+                <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"></path>
             </svg>
         </button>
 
-        <nav id="menu" class="hidden absolute top-0 left-0 w-full h-screen bg-gray-900 bg-opacity-90 flex justify-center items-center transform transition-transform duration-300 ease-in-out translate-y-full z-40">
-            <ul class="flex flex-col space-y-8 text-center text-2xl font-semibold">
-                <li><a href="#" class="text-white transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-yellow-300 block p-2">Home</a></li>
-                <li><a href="#" class="text-white transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-yellow-300 block p-2">About</a></li>
-                <li><a href="#" class="text-white transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-yellow-300 block p-2">Projects</a></li>
-                <li><a href="#" class="text-white transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:text-yellow-300 block p-2">Contact</a></li>
+        <nav id="menu"
+            class="hidden absolute top-0 left-0 w-full h-screen bg-gray-900 bg-opacity-95 flex justify-center items-center transform transition-transform duration-300 ease-in-out translate-y-full z-40">
+            <ul class="flex flex-col space-y-8 text-center text-3xl font-semibold">
+                <li><a href="index.html"
+                        class="text-white hover:text-yellow-300 block p-2 transition-colors duration-300">Home</a></li>
+                <li><a href="about.html"
+                        class="text-white hover:text-yellow-300 block p-2 transition-colors duration-300">About</a></li>
+                <li><a href="projects.html"
+                        class="text-white hover:text-yellow-300 block p-2 transition-colors duration-300">Projects</a>
+                </li>
+                <li><a href="contact.html"
+                        class="text-white hover:text-yellow-300 block p-2 transition-colors duration-300">Contact</a>
+                </li>
             </ul>
         </nav>
     </header>
-    <main class="bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-5xl font-extrabold text-transparent  ">
-        <section>
-        <div class="mx-6 my-10 text-left mb-0">
-            <h1 class="font-bold text-4xl text-shadow-lg/20 text-shadow-white">PENIEL MABANZA</h1>
-        </div>
-        <div class="text-right mx-5 mb-13">
-            <h2 class="font-semibold text-2xl text-shadow-lg/30 text-shadow-white">Développeur Web & Mobile</h2>
-        </div>
-        <div class="mx-6">
-            <img src="/profil.jpg" alt="photo de profil" class="w-full object-cover drop-shadow-xl rounded-lg mask-linear-50 mask-linear-from-60% mask-linear-to-80% bg-[url(/profil.jpg)] ">
-        </div>
-        <a href="#next-section" class="block">
-            <img src="/double-arrows.png" alt="double flèches" class="mx-auto my-10 size-15 animate-bounce">
-        </a>
+
+    <main class="flex-grow flex flex-col items-center justify-center p-4 text-center">
+        <section class="max-w-4xl w-full">
+            <div class="mb-8 md:mb-10">
+                <h1
+                    class="font-extrabold text-4xl sm:text-5xl md:text-6xl bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent text-shadow-lg/20">
+                    PENIEL MABANZA</h1>
+            </div>
+            <div class="mb-12 md:mb-16">
+                <h2 class="font-semibold text-xl sm:text-2xl md:text-3xl text-shadow-lg/30 text-shadow-white">Web &
+                    Mobile Developer</h2>
+            </div>
+            <div class="mx-6 w-full">
+                <img src="/profil.jpg" alt="photo de profil"
+                    class="w-xs drop-shadow-xl rounded-lg mask-linear-50 mask-linear-from-60% mask-linear-to-80% bg-[url(/profil.jpg)] ">
+
+            </div>
+            <a href="#next-section" class="block mt-16 md:mt-20">
+                <img src="/double-arrows.png" alt="double flèches"
+                    class="size-16 sm:size-20 mx-auto border-4 sm:border-7 transition duration-700 ease-in-out shadow-xl border-white rounded-full animate-bounce">
+            </a>
         </section>
     </main>
-    <footer></footer>
+
+    <footer class="p-4 text-center text-gray-500 text-sm">
+        &copy; 2025 Peniel M. All rights reserved.
+    </footer>
 
     <script>
         const toggleButton = document.getElementById('menu-toggle');
         const menu = document.getElementById('menu');
         const burgerIcon = document.getElementById('burger-icon');
         const closeIcon = document.getElementById('close-icon');
+        const body = document.body;
 
-        toggleButton.addEventListener('click', () => {
+        function toggleMenu() {
             const isMenuOpen = !menu.classList.contains('hidden');
 
-            // Bascule la visibilité du menu
             menu.classList.toggle('hidden');
             menu.classList.toggle('translate-y-full'); // Pour le faire apparaître/disparaître du bas
 
-            // Bascule les icônes (burger <-> croix)
             burgerIcon.classList.toggle('hidden');
             closeIcon.classList.toggle('hidden');
 
-            // Gérer le focus pour l'accessibilité
-            if (isMenuOpen) {
-                toggleButton.setAttribute('aria-expanded', 'false');
-            } else {
-                toggleButton.setAttribute('aria-expanded', 'true');
-            }
-        });
+            toggleButton.setAttribute('aria-expanded', isMenuOpen ? 'false' : 'true');
 
-        // Fermer le menu si on clique sur un lien (optionnel)
+            // Empêche le scroll du body quand le menu est ouvert
+            if (!isMenuOpen) {
+                body.style.overflow = 'hidden'; // Désactive le scroll
+            } else {
+                body.style.overflow = ''; // Réactive le scroll
+            }
+        }
+
+        toggleButton.addEventListener('click', toggleMenu);
+
+        // Fermer le menu si on clique sur un lien
         const menuLinks = document.querySelectorAll('#menu a');
         menuLinks.forEach(link => {
             link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-                menu.classList.add('translate-y-full');
-                burgerIcon.classList.remove('hidden');
-                closeIcon.classList.add('hidden');
-                toggleButton.setAttribute('aria-expanded', 'false');
+                // Ferme le menu
+                toggleMenu();
             });
         });
-        const logoPema = document.getElementById('logo-pema');
 
-logoPema.addEventListener('click', () => {
-    // Redirige vers la page d'accueil.
-    window.location.href = 'index.html';
-});
+        // Gestion du logo PEMA pour les deux versions (mobile et desktop)
+        const logoPemaMobile = document.getElementById('logo-pema-mobile');
+        const logoPemaDesktop = document.getElementById('logo-pema-desktop');
 
-// Pour l'accessibilité, gère aussi le clic sur la touche Entrée
-logoPema.addEventListener('keypress', (event) => {
-    if (event.key === 'Enter') {
-        window.location.href = 'index.html';
-    }
-});
+        if (logoPemaMobile) {
+            logoPemaMobile.addEventListener('click', () => {
+                window.location.href = 'index.html';
+            });
+            logoPemaMobile.addEventListener('keypress', (event) => {
+                if (event.key === 'Enter') {
+                    window.location.href = 'index.html';
+                }
+            });
+        }
+
+        if (logoPemaDesktop) {
+            logoPemaDesktop.addEventListener('click', () => {
+                window.location.href = 'index.html';
+            });
+            logoPemaDesktop.addEventListener('keypress', (event) => {
+                if (event.key === 'Enter') {
+                    window.location.href = 'index.html';
+                }
+            });
+        }
+
     </script>
 </body>
+
 </html>
